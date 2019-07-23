@@ -11,3 +11,6 @@
  *
  * @package ysc
  */
+
+// YSC Blocks load in Dev
+require_once( plugin_dir_path( __FILE__ ) . '/dist/ysc_blocks/class-ysc.php' );

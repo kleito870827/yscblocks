@@ -4,5 +4,47 @@
   "version": "1.0.0",
   "description": "YSC Blocks collection and extensions for Gutenberg",
   "license": "GPL-2.0",
-  "author": "YSC <https://yasielscaleo.com/>"
+  "author": "YSC <https://yasielscaleo.com/>",
+  "scripts": {
+    "build": "wpeg --build",
+    "dev": "wpeg --build --watch",
+    "production": "wpeg --build --zip",
+    "php-lint": "composer run-script phpcs",
+    "php-lint-fix": "composer run-script phpcbf",
+    "css-lint": "stylelint --syntax scss \"src/**/*.scss\"",
+    "css-lint-fix": "stylelint --fix --syntax scss \"src/**/*.scss\"",
+    "js-lint": "eslint --ext .js --ext .jsx src/",
+    "js-lint-fix": "eslint --ext .js --ext .jsx --fix src/",
+    "lint": "npm run php-lint && npm run css-lint && npm run js-lint",
+    "lint-fix": "npm run php-lint-fix && npm run css-lint-fix && npm run js-lint-fix",
+    "update:packages": "npm i -g npm-check-updates && npm-check-updates -u && npm install",
+    "postinstall": "composer install"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "@svgr/webpack": "^4.3.0",
+    "babel-eslint": "^10.0.2",
+    "base64-inline-loader": "^1.1.1",
+    "eslint": "5.16.0",
+    "eslint-config-wordpress": "2.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-wordpress": "^0.1.0",
+    "json-file": "^0.1.0",
+    "md5": "^2.2.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0",
+    "stylelint-scss": "^3.8.0",
+    "wpeg": "0.0.15"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
 }
