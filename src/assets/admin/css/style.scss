@@ -1,0 +1,110 @@
+/**
+ * Editor Additional Styles.
+ */
+ @import "../../../gutenberg/variables";
+
+ .ysc-help-text {
+     font-size: 90%;
+     font-style: italic;
+     color: #a0a0a0;
+ }
+ 
+ .ysc-code {
+     background: #eef0f3;
+     border-radius: 3px;
+ }
+ 
+ /**
+  * Grid for controls.
+  */
+ .ysc-grid-controls {
+     display: flex;
+     flex-wrap: wrap;
+     margin: 0 -10px;
+ 
+     > * {
+         flex: 1;
+         min-width: 80px;
+         margin: 0 10px !important; // stylelint-disable-line
+     }
+ }
+ 
+ /**
+  * Extensions badge
+  */
+ .ysc-ext-badge {
+     position: relative;
+     left: 8px;
+     padding: 1px 3px;
+     font-size: 8px;
+     font-weight: 700;
+     color: #a9a9a9;
+     text-transform: uppercase;
+     background-color: #f3f3f3;
+     border-radius: 2px;
+     transition: .15s background-color, .15s color;
+ 
+     .components-panel__body-toggle:hover > & {
+         color: #fff;
+         background-color: #006159;
+     }
+ }
+ 
+ /**
+  * Tabs Control.
+  */
+ .ysc-control-tabs {
+ 
+     .components-tab-panel__tabs {
+         display: flex;
+         flex-wrap: wrap;
+         margin-bottom: 15px;
+         border-bottom: 1px solid $light-gray-400;
+ 
+         .ysc-control-tabs-tab {
+             padding: 9px 11px;
+             padding-bottom: 11px;
+             margin: 0;
+             margin-bottom: -1px;
+             color: #555d66;
+             cursor: pointer;
+             background: none;
+             border: none;
+             border-bottom: 2px solid transparent;
+             border-radius: 0;
+             outline-offset: -1px;
+ 
+             svg {
+                 display: block;
+                 width: auto;
+                 height: 1.4em;
+             }
+ 
+             &.is-active {
+                 position: relative;
+                 border-bottom: 2px solid $blue-medium-500;
+                 z-index: 1;
+             }
+         }
+     }
+ 
+     .ysc-control-tabs-separator {
+         padding: 15px;
+         margin-right: -15px;
+         margin-left: -15px;
+         border-top: 1px solid $light-gray-400;
+ 
+         &:first-child {
+             margin-top: -16px;
+         }
+     }
+ }
+ 
+ /**
+  *
+  */
+ .ysc-component-input-drag {
+     input {
+         cursor: n-resize;
+     }
+ }

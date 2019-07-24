@@ -2,6 +2,9 @@
 import "./style.scss";
 import "./editor.scss";
 
+// Internal Dependencies.
+import getIcon from '../../utils/get-icon';
+
 const { __ } = wp.i18n;
 
 export const name = "ysc/button";
@@ -11,13 +14,19 @@ export const settings = {
 
   description: __("Change important links to buttons to get more click rate."),
 
-  icon: "wordpress",
+  icon: getIcon( 'block-button', true ),
 
   category: "ysc",
 
   keywords: [__("btn"), __("button")],
 
-  edit: function(props) {
+  ysc: {
+    supports: {
+      spacings: true,
+    }
+  },
+
+  edit: function(props) {   
     return <h1>button</h1>;
   },
 
