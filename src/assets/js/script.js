@@ -1,6 +1,6 @@
 import { throttle } from 'throttle-debounce';
 import scriptjs from 'scriptjs';
-import rafl from 'rafl';
+import rafl from 'rafl'; 
 
 import parseSRConfig from '../../gutenberg/extend/scroll-reveal/parseSRConfig.jsx';
 
@@ -752,6 +752,38 @@ class YSCClass {
         YSC.triggerEvent( 'afterPrepareVideo', self );
     }
 
+     /**
+     * Prepare Gist
+     */
+    prepareGist() {
+        const self = this;
+
+        if ( typeof jQuery.fn.gistsimple === 'undefined' ) {
+            return;
+        }
+
+        YSC.triggerEvent( 'beforePrepareGist', self );
+
+        $( '.ysc-gist:not(.ysc-gist-ready)' ).each( function() {
+            const $this = $( this );
+            $this.addClass( 'ysc-gist-ready' );
+
+            const match = /^https:\/\/gist.github.com?.+\/(.+)/g.exec( $this.attr( 'data-url' ) );
+
+            if ( match && typeof match[ 1 ] !== 'undefined' ) {
+                $this.gistsimple( {
+                    id: match[ 1 ],
+                    file: $this.attr( 'data-file' ),
+                    caption: $this.attr( 'data-caption' ),
+                    showFooter: $this.attr( 'data-show-footer' ) === 'true',
+                    showLineNumbers: $this.attr( 'data-show-line-numbers' ) === 'true',
+                } );
+            }
+        } );
+
+        YSC.triggerEvent( 'afterPrepareGist', self );
+    }
+
     /**
      * Prepare Changelog
      */
@@ -898,6 +930,8 @@ class YSCClass {
 
         $( '[data-ysc-sr]:not(.data-ysc-sr-ready)' ).each( function() {
             const $element = $( this );
+            console.log($element);
+            
 
             $element.addClass( 'data-ysc-sr-ready' );
 

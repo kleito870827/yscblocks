@@ -36,7 +36,7 @@ module.exports = {
                 },
                 {
                   cleanupIDs: {
-                    prefix: `ghostkit-${md5(resource)}-`
+                    prefix: `ysc-${md5(resource)}-`
                   }
                 }
               ]

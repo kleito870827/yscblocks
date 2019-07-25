@@ -3,6 +3,26 @@
  */
 @import "./variables";
 
+.ysc-progress,
+.ysc-button-wrapper,
+.ysc-icon-box,
+.ysc-tabs,
+.ysc-accordion,
+.ysc-counter-box,
+.ysc-alert,
+.ysc-carousel,
+.ysc-video,
+.ysc-testimonial,
+.ysc-gist,
+.ysc-google-maps,
+.ysc-changelog,
+.ysc-pricing-table,
+.ysc-widgetized-area,
+.ysc-instagram,
+.ysc-twitter {
+    margin-bottom: 28px;
+}
+
 /**
  * Display.
  */
@@ -15,3 +35,13 @@
   * Blocks Styles
   */
 @import "./blocks/button/style";
+
+/**
+ * Additional classes.
+ */
+
+// Scroll Reveal
+[data-ysc-sr] {
+  pointer-events: none;
+  visibility: hidden;
+}

@@ -233,7 +233,7 @@ const withInspectorControl = createHigherOrderComponent( ( OriginalComponent ) =
                             title={ (
                                 <Fragment>
                                     { __( 'Animate on Scroll' ) }
-                                    <span className="ysc-ext-badge">{ __( 'ext' ) }</span>
+                                    <span className="ysc-ext-badge">{ __( 'ysc ext' ) }</span>
                                 </Fragment>
                             ) }
                             initialOpen={ initialOpenPanel }
