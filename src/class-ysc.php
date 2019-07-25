@@ -99,7 +99,10 @@ class YSC {
         $this->plugin_url = plugin_dir_url( __FILE__ );   
 
         // additional blocks php.
-        require_once( $this->plugin_path . 'gutenberg/index.php' );        
+        require_once( $this->plugin_path . 'gutenberg/index.php' );   
+        
+        // icons.
+        require_once( $this->plugin_path . 'classes/class-icons.php' );
     }
 
     /**
@@ -259,7 +262,14 @@ class YSC {
                  */
             ) ) : array(),
             'variants'          => array(                            
-                'button'             => array_merge( $default_variant, apply_filters( 'ysc_button_variants', array() ) ),                
+                'button_wrapper'     => array_merge( $default_variant, apply_filters( 'ysc_button_wrapper_variants', array() ) ),
+                'button'             => array_merge( $default_variant, apply_filters( 'ysc_button_variants', array() ) ),
+                'accordion'          => array_merge( $default_variant, apply_filters( 'ysc_accordion_variants', array() ) ),
+                'accordion_item'     => array_merge( $default_variant, apply_filters( 'ysc_accordion_item_variants', array() ) ),               
+                'alert'              => array_merge( $default_variant, apply_filters( 'ysc_alert_variants', array() ) ),
+                'divider'            => array_merge( $default_variant, apply_filters( 'ysc_divider_variants', array() ) ),
+                'tabs'               => array_merge( $default_variant, apply_filters( 'ysc_tabs_variants', array() ) ),
+                'tabs_tab'           => array_merge( $default_variant, apply_filters( 'ysc_tabs_tab_variants', array() ) ),
             ),
             'admin_url'           => admin_url(),
             'admin_templates_url' => admin_url( 'edit.php?post_type=ysc_template' ),

@@ -1,0 +1,54 @@
+/**
+ * Frontend Styles
+ */
+@import "../../variables";
+
+.ysc-divider {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 0;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    flex: 1;
+    max-width: 50%;
+    border-bottom: 1px solid $light-gray-200;
+    transition: 0.2s border-color ease-in-out;
+  }
+
+  &:not(.ysc-divider-with-icon) {
+    &::before {
+      max-width: 100%;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  &.ysc-divider-type-solid::before,
+  &.ysc-divider-type-solid::after {
+    border-bottom-style: solid;
+  }
+  &.ysc-divider-type-dashed::before,
+  &.ysc-divider-type-dashed::after {
+    border-bottom-style: dashed;
+  }
+  &.ysc-divider-type-dotted::before,
+  &.ysc-divider-type-dotted::after {
+    border-bottom-style: dotted;
+  }
+  &.ysc-divider-type-double::before,
+  &.ysc-divider-type-double::after {
+    border-bottom-style: double;
+  }
+
+  .ysc-divider-icon {
+    display: flex;
+    padding-right: 1em;
+    padding-left: 1em;
+    transition: 0.2s color ease-in-out;
+  }
+}

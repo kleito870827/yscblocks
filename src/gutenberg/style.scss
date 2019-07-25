@@ -20,22 +20,25 @@
 .ysc-widgetized-area,
 .ysc-instagram,
 .ysc-twitter {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 /**
  * Display.
  */
- @import "./bootstrap/functions";
- @import "./bootstrap/variables";
- @import "./bootstrap/breakpoints";
- @import "./bootstrap/display";
+@import "./bootstrap/functions";
+@import "./bootstrap/variables";
+@import "./bootstrap/breakpoints";
+@import "./bootstrap/display";
 
 /**
   * Blocks Styles
   */
 @import "./blocks/button/style";
 @import "./blocks/accordion/style";
+@import "./blocks/alert/style";
+@import "./blocks/divider/style";
+@import "./blocks/tabs/style";
 
 /**
  * Additional classes.
