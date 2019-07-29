@@ -8,6 +8,7 @@ import * as tabs from "./tabs";
 import * as tabsTab from "./tabs/tab";
 import * as tabsLegacy from "./tabs/legacy";
 import * as tabsLegacyTab from "./tabs/legacy/tab";
+import * as widgetizedArea from "./widgetized-area";
 
 /**
  * Internal dependencies
@@ -28,7 +29,8 @@ jQuery(() => {
     tabs,
     tabsTab,
     tabsLegacy,
-    tabsLegacyTab
+    tabsLegacyTab,
+    widgetizedArea
   ].forEach(({ name, settings }) => {
     registerBlockType(name, settings);
   });

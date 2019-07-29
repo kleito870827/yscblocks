@@ -99,7 +99,10 @@ class YSC {
         $this->plugin_url = plugin_dir_url( __FILE__ );   
 
         // additional blocks php.
-        require_once( $this->plugin_path . 'gutenberg/index.php' );   
+        require_once( $this->plugin_path . 'gutenberg/index.php' );  
+        
+        // reusable widget.
+        require_once( $this->plugin_path . 'classes/class-reusable-widget.php' );
         
         // icons.
         require_once( $this->plugin_path . 'classes/class-icons.php' );
