@@ -67,8 +67,7 @@ export const settings = {
   keywords: [__("widget"), __("sidebar")],
   supports: {
     html: false,
-    className: false,
-    align: ["wide", "full"]
+    className: false
   },
   attributes: {
     id: {

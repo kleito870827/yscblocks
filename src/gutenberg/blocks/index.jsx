@@ -9,6 +9,8 @@ import * as tabsTab from "./tabs/tab";
 import * as tabsLegacy from "./tabs/legacy";
 import * as tabsLegacyTab from "./tabs/legacy/tab";
 import * as widgetizedArea from "./widgetized-area";
+import * as grid from "./grid";
+import * as gridColumn from "./grid/column";
 
 /**
  * Internal dependencies
@@ -30,7 +32,9 @@ jQuery(() => {
     tabsTab,
     tabsLegacy,
     tabsLegacyTab,
-    widgetizedArea
+    widgetizedArea,
+    grid,
+    gridColumn
   ].forEach(({ name, settings }) => {
     registerBlockType(name, settings);
   });

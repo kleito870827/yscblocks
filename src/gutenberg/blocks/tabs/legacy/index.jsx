@@ -178,8 +178,7 @@ export const settings = {
     inserter: false,
     html: false,
     className: false,
-    anchor: true,
-    align: ["wide", "full"]
+    anchor: true
   },
   attributes: {
     tabsCount: {

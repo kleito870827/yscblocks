@@ -283,8 +283,7 @@ export const settings = {
   supports: {
     html: false,
     className: false,
-    anchor: true,
-    align: ["wide", "full"]
+    anchor: true    
   },
   attributes: {
     type: {
