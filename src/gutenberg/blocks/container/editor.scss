@@ -1,0 +1,19 @@
+/**
+ * Editor Styles
+ */
+@import "../../variables";
+
+// Grid from Bootstrap 4.1
+@import "../../bootstrap/functions";
+@import "../../bootstrap/variables";
+@import "../../bootstrap/grid";
+@import "../../bootstrap/breakpoints";
+
+.ysc-container-block {
+  .ysc-container-content {
+    padding: 0 40px;
+  }
+  .wp-block {
+    max-width: 99%;
+  }
+}

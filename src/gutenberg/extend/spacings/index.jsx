@@ -428,7 +428,7 @@ const withInspectorControl = createHigherOrderComponent( ( OriginalComponent ) =
                             </ResponsiveTabPanel>
 
                             <p style={ { marginBottom: 20 } }></p>
-                            <BaseControl help={ __( 'Spacings settings will only take effect on YSC Blocks. Core blocks will have spacings only on the preview or live page, and not while you\'re in editing mode.' ) } />
+                            {/* <BaseControl help={ __( 'Spacings settings will only take effect on YSC Blocks. Core blocks will have spacings only on the preview or live page, and not while you\'re in editing mode.' ) } /> */}
                         </PanelBody>
                     </InspectorControls>
                 </Fragment>

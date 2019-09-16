@@ -5,7 +5,6 @@ import './editor.scss';
 import classnames from 'classnames/dedupe';
 
 // Internal Dependencies.
-// import './awb-fallback';
 import getIcon from '../../utils/get-icon';
 import ApplyFilters from '../../components/apply-filters';
 
