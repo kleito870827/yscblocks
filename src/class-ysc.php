@@ -98,14 +98,23 @@ class YSC {
         $this->plugin_path = plugin_dir_path( __FILE__ );
         $this->plugin_url = plugin_dir_url( __FILE__ );   
 
+        // settings.
+        require_once( $this->plugin_path . 'settings/index.php' );
+
         // additional blocks php.
         require_once( $this->plugin_path . 'gutenberg/index.php' );  
+
+        // rest.
+        require_once( $this->plugin_path . 'classes/class-rest.php' );
         
         // reusable widget.
         require_once( $this->plugin_path . 'classes/class-reusable-widget.php' );
         
         // icons.
         require_once( $this->plugin_path . 'classes/class-icons.php' );
+
+        // templates.
+        require_once( $this->plugin_path . 'classes/class-templates.php' );
     }
 
     /**
@@ -278,7 +287,7 @@ class YSC {
                 'container'          => array_merge( $default_variant, apply_filters( 'ysc_container_variants', array() ) ),
             ),
             'admin_url'           => admin_url(),
-            'admin_templates_url' => admin_url( 'edit.php?post_type=ysc_template' ),
+            'admin_templates_url' => admin_url( 'edit.php?post_type=ysc_template' ), 
         ) );
     }
 

@@ -1,7 +1,7 @@
 /**
  * Store
  */
-import './store';
+import "./store";
 
 /**
  * Blocks
@@ -11,7 +11,12 @@ import "./blocks";
 /**
  * Extensions
  */
-import './extend';
+import "./extend";
+
+/**
+ * Plugins
+ */
+import "./plugins";
 
 /**
  * Icon
@@ -31,7 +36,7 @@ if (updateCategory) {
     icon: (
       <YSCCategoryIcon
         style={{
-          color: '#006159',
+          color: "#006159",
           width: "20px",
           height: "20px",
           marginLeft: "7px",

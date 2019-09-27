@@ -1,0 +1,66 @@
+@import "../../gutenberg/variables";
+
+.ysc-admin-head {
+  padding: 35px;
+  padding-top: 50px;
+  padding-bottom: 0;
+  margin: -35px;
+  margin-bottom: 35px;
+  background-color: $color-brand-3;
+  background-position: 50% 60%;
+  background-size: cover;
+
+  h1 {
+    position: absolute;
+    left: -9999px;
+    font-size: 0;
+  }
+
+  svg {
+    width: 200px;
+    height: auto;
+  }
+}
+
+.ysc-admin-head-wrap,
+.ysc-admin-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ysc-admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  margin: 0;
+  list-style: none;
+
+  > li {
+    margin: 0;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 19px;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    outline: none;
+    transition: 0.2s color, 0.2s background-color;
+
+    &:hover {
+      background-color: rgba($light-gray-100, 0.1);
+    }
+
+    &.ysc-admin-tabs-button-active {
+      color: $color-brand-3;
+      &,
+      &:hover {
+        background-color: $light-gray-100;
+      }
+    }
+  }
+}

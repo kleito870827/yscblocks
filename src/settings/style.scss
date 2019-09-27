@@ -1,0 +1,20 @@
+/**
+ * YSC Settings Styles.
+ */
+@import "../gutenberg/variables";
+
+body.toplevel_page_ysc {
+  // prevent content jumping
+  overflow-y: scroll;
+  background-color: $light-gray-100;
+}
+
+.ysc-admin-page {
+  padding: 35px;
+  margin-left: -20px;
+
+  &,
+  * {
+    box-sizing: border-box;
+  }
+}
